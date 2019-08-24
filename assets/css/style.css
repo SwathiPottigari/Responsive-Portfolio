@@ -1,0 +1,163 @@
+/* Styles used for common elements */
+html,body{
+    display: block;
+    margin: 0;
+    background-image: url(../images/white-waves.png);
+    /* height:100%; */
+    padding: 0%;
+    /* For resizing the web page according to the size of the window */
+    width:100%;
+    min-width:300px;
+    height:auto;
+    
+}
+h3{
+    background-color: #4aaaa5;
+    color: white;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    height: 80px;
+    margin: 0;
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    position: absolute;
+    right: 0;
+    bottom:20px;
+    display: inline-block;
+}
+a{
+    color: #777777;
+    padding: 10px 10px;
+}
+
+a:hover{
+    color:#4aaaa5;
+}
+
+#mainheading{
+    position:relative;
+    text-align: center;
+    height: 80px;
+    background-color:#ffffff;
+    width: 960px;
+    margin: 0 auto;
+
+}
+header{
+    background-color:#ffffff;
+border-bottom-color: #cccccc;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+width: 100%;
+}
+
+#header2{
+    color: #4aaaa5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom-color:#dddddd;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    top: 0%;
+}
+.container,#wrapper{
+    width: 920px;
+    background-color:#ffffff;
+    margin: 0 auto;    
+    padding: 20px;
+    margin-top: 1%;
+    min-height: 100%;
+}
+
+footer{
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-small;
+    height: 30px;
+    color: white;
+    padding-top: 20px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+}
+
+/* Styles for index.html */
+#profilepic{
+   float: left;
+   margin-right: 10px;
+}
+p{
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color:#777777;
+}
+
+
+
+/* Styles for Contact.html */
+form{
+    color: #777777;
+    width: 920px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+textarea{
+    columns: 50;
+    grid-auto-rows: 100;
+    width: 800px;
+    height: 150px;
+}
+.text{
+    width: 800px;
+}
+#submit{
+    background-color: #4aaaa5;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+
+#submit:hover{
+    background-color: #777777;
+    color: aqua;
+}
+
+/* Styles for Portfolio.html */
+#wrapper{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    margin-bottom: 10%;
+}
+
+.flexrow{
+    display: flex;
+    align-content: center;
+}
+
+.portdiv{
+    position: relative;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+.portp{
+    position:absolute;    
+    background-color:#4aaaa5;
+    text-align: center;
+    color:#ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 171px;
+    bottom: 0%; 
+    line-height: 1.5;
+    font-size: small;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
