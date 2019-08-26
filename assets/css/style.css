@@ -42,7 +42,8 @@ a:hover{
     text-align: center;
     height: 80px;
     background-color:#ffffff;
-    width: 960px;
+    /* width: 960px; */
+    width: 75%;
     margin: 0 auto;
 
 }
@@ -63,7 +64,8 @@ width: 100%;
     top: 0%;
 }
 .container,#wrapper{
-    width: 920px;
+    /* width: 920px; */
+    width: 74%;
     background-color:#ffffff;
     margin: 0 auto;    
     padding: 20px;
@@ -100,20 +102,23 @@ p{
 /* Styles for Contact.html */
 form{
     color: #777777;
-    width: 920px;
+    /* width: 920px; */
+    width: 74%;
     background-color:#ffffff;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-top: 20px;
     padding-bottom: 20px;
 }
 textarea{
     columns: 50;
     grid-auto-rows: 100;
-    width: 800px;
+    /* width: 800px; */
+    width: 90%;
     height: 150px;
 }
 .text{
-    width: 800px;
+    /* width: 800px; */
+    width: 90%;
 }
 #submit{
     background-color: #4aaaa5;
@@ -160,4 +165,52 @@ textarea{
     padding-bottom: 5px;
 }
 
+/* For screen resolution 980px */
+@media screen and (max-width: 980px){
+    .container,#wrapper{
+        width: 60%;
+        /* padding-left: 0; */
+        margin-left:12%;
+    }
+    textarea,.text{
+        width: 80%;
+    }
+    }
+
+    /* For screen resolution 780px*/
+@media screen and (max-width: 780px){
+    .container,#wrapper{
+        width: 94%;
+        margin-left:20px;
+        margin-right: 0;
+        /* padding-left: 0; */
+    }
+    #mainheading{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h3{
+        width: 140px;
+        /* padding-left: 20px; */
+        margin-left: 20px;
+    }
+    .flexrow{
+        width: 100%;
+    }
+    .portdiv{
+        width: 40%;
+    }
+    .imgp,.portp{
+        width: 100%;
+    }
+    form{
+        width:100%;
+    }
+    textarea,.text{
+        width: 100%;
+    }
+    }
 
