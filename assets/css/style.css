@@ -185,6 +185,9 @@ textarea{
         margin-right: 0;
         /* padding-left: 0; */
     }
+    nav{
+        right: 10%;
+    }
     #mainheading{
         width: 100%;
         margin-left: 0;
@@ -214,3 +217,35 @@ textarea{
     }
     }
 
+    @media screen and (max-width: 640px){
+        .container,#wrapper{
+            width: 90%;
+            margin-left:20px;
+            margin-right:20px;
+            /* padding-left: 0; */
+        }
+        #mainheading{
+            width: 100%;
+        }
+        h3{
+            width: 100%;
+            margin-left: 0;
+            height: 50%;
+        }
+        nav{
+            left: 30%;
+            right: 40%;
+            bottom: 10px;
+        }
+        .flexrow{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        .portdiv{
+            margin-right: 0px;
+            width: 100%;
+        }
+
+    }
