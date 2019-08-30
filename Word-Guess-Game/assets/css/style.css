@@ -22,6 +22,8 @@ body, html {
 }
 #images{
     text-align: center;
+    width: 80%;
+    height: 80%;
 }
 .mainWrapper{
     min-height: 100%;
@@ -33,14 +35,14 @@ body, html {
     border: 2px dashed rgb(97, 16, 151);
     margin: 0 auto;
 }
-#winsLabel{
+/* #winsLabel{
     text-align: right;
     padding-right: 0;
 }
 #wins{
     text-align: left;
-    /* padding-left: 0; */
-}
+   
+} */
 .pageContent{
     font-size: large;
     font-style: italic;

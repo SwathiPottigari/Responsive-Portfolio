@@ -1,4 +1,4 @@
-var words = [{w:"hello",c:"It's a greeting !!",img:"img1"}, {w:"happy",c:"It's an emotion !!",img:"img2"},{w:"smile",c:"you do it when you are happy !!",img:"smiley"}];
+var words = [{w:"hello",c:"It's a greeting !!",img:"hello"}, {w:"happiness",c:"It's an emotion !!",img:"happy"},{w:"smile",c:"It makes others also happy!!",img:"smiley"},{w:"pedestrian",c:"You see them regularly while driving!!",img:"pedestrian"},{w:"butterscotch",c:"Ice-cream flavour",img:"icecream"},{w:"burgundy",c:"People get confused if its a drink or color!!!",img:"color"},{w:"friendship",c:"Bond between two persons",img:"friendship"},{w:"cute",c:"Girls often use this word",img:"cute"}];
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var hide = document.getElementById("hide");
 var guessLeft=document.getElementById("guessLeft");
@@ -14,7 +14,7 @@ var wonAudio=document.getElementById("wonAudio");
 // This method is called when browser is loaded or refreshed
 window.onload = function () {
     clue.textContent="Hint : "+randomWord.c;
-    image.innerHTML= '<img  src="assets/images/'+randomWord.img+'.png" alt="">';
+    image.innerHTML= '<img  src="assets/images/'+randomWord.img+'.png" alt="" class="img-fluid" style="padding:20px;">';
     hide.innerHTML = hideWord(randomWord.w);
     guessLeft.textContent=chancesLeft;
 };
@@ -24,7 +24,7 @@ document.onkeyup=function(event){
    
     if(chancesLeft-1>0)
     {
-        chosenWord(event.key);
+        chosenWord(event.key.toLowerCase());
         guessLeft.textContent=chancesLeft;
     }
     else{
