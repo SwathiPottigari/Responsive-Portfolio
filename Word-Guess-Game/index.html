@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word-Guess</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/images/Favicon.jfif" type="image/jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- <div class="banner">
+
+    </div> -->
+    <!-- <div class="myimage">
+ 
+        </div> -->
+    <header>
+        <div id="mainHeading">
+            <h1 id="mainHeading">Guess The Word...</h1>
+        </div>
+    </header>
+
+    <div class="mainWrapper">
+
+        <div id="clue"></div>
+        <div class="tblWrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="images"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md pageContent">
+                                Press any key to start!!
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 pageContent" id="winsLabel">
+                                Wins :
+                            </div>
+                            <div class="col-md-6 pageContent" id="wins">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent">
+                                Current Word
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent" id="hide">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent">
+                                Number of guesses remaining
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent" id="guessLeft">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent">
+                                Letters already Guessed
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md pageContent" id="userLetters">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <audio id="lostAudio">
+        <source src="assets/images/Lost.mp3" type="audio/mpeg" >
+    </audio>
+    <audio id="wonAudio">
+            <source src="assets/images/Win.mp3" type="audio/mpeg" >
+        </audio>
+    <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
