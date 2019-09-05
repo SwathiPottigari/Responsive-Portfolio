@@ -1,0 +1,87 @@
+body{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/Background.png');
+}
+
+img{
+    width: 150px;
+    height: 200px
+}
+
+#mainHeading{
+    text-align: center;
+    color: rgb(97, 16, 151);
+    text-shadow: 3px 2px rgb(185, 145, 230);
+    font: bolder;
+    font-size: 100px;
+    font-style: italic;
+}
+
+#wrapper{
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+#instructions{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+   
+}
+ul { 
+    display:table; 
+    margin:0 auto;
+    /* color:blueviolet;
+    font-style: italic; */
+}
+#instructionWrapper{
+    color:blueviolet;
+    font-style: italic;
+    background-color: rgb(212, 190, 233);
+    width: 80%;
+    margin: 0 auto;
+}
+.container{
+    color: rgb(97, 16, 151);
+}
+#randomNumDiv,.crystals{
+    text-align: center;
+}
+#randomNumber{
+    font-size: 35px;
+    font-weight: bolder;
+}
+#statusDiv{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.scorecard{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:blueviolet;
+}
+footer{
+    /* background-color: rgb(185, 145, 230); */
+    border-top: 4px solid rgb(97, 16, 151);    
+    text-align: center;
+    font-size: small;
+    height: 30px;
+    color:rgb(97, 16, 151);
+    /* padding-top: 20px; */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+}
+
+@media  screen and (max-width:780px) {
+    #mainHeading
+    {
+        font-size: 5vh;
+    }
+}
+

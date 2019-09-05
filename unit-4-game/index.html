@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Game</title>
+    <link rel="shortcut icon" href="assets/images/Musician.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="mainHeading">
+            <h1 id="mainHeading">Crystals Collector!!</h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="instructionWrapper">
+            <h3 id="instructions">Instructions :</h3>
+            <div>
+            <ul >
+                <li> You will be given a random number at the start of the game.</br></li>
+                <li> There are four crystals below.By clicking on a crystal you will add a specific amount of points to your
+                    total score.</br></li>
+                <li>You win the game by matching your total score to random number,you lose the game if your total score
+                    goes above the random number.</li>
+                <li>The value of each crystal is hidden from you until you click on it</li>
+                <li>Each time when the game starts,the game will change the values of each crystal.</li>
+            </ul>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6" id="randomNumDiv">
+                    <h5>Match the number to:</h5>
+                    <div id="randomNumber">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6" id="statusDiv">
+                    <div id="status"></div>
+                    <div id="wins"></div>
+                    <div id="loss"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 crystals">
+                    <img src="assets/images/crystal1.jpg" alt="crystal1" data-value="crystal1">
+                    <!-- <button id="crystal1" value="crystal1">crystal1</button> -->
+                </div>
+                <div class="col-md-3 col-sm-3 crystals">
+                    <img src="assets/images/crystal2.jpg" alt="crystal2" data-value="crystal2">
+                    <!-- <button id="crystal2" value="crystal2">crystal2</button> -->
+                </div>
+                <div class="col-md-3 col-sm-3 crystals">
+                    <img src="assets/images/crystal3.jpg" alt="crystal3" data-value="crystal3">
+                    <!-- <button id="crystal3" value="crystal3">crystal3</button> -->
+                </div>
+                <div class="col-md-3 col-sm-3 crystals">
+                    <img src="assets/images/crystal4.jpg" alt="crystal4" data-value="crystal4">
+                    <!-- <button id="crystal4" value="crystal4">crystal4</button> -->
+                </div>
+            </div>
+            <div class="row scorecard">
+                <div class="col-md-12">
+                    <p>Your score is</p>
+                </div>
+                <div class="col-md-12">
+                    <div id="userScore"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="lostAudio">
+            <source src="assets/images/Lost.mp3" type="audio/mpeg" >
+        </audio>
+        <audio id="wonAudio">
+                <source src="assets/images/Win.mp3" type="audio/mpeg" >
+            </audio>
+        <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
