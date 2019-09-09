@@ -1,7 +1,7 @@
 $.getScript("questions.js");
 
 // Global variables
-var timer = 5;
+var timer = 30;
 var question = $("#question");
 var randomQstn = '';
 var correct = 0;
@@ -43,7 +43,7 @@ $(".ans").click(function () {
         incorrect++;
     }
     resetTimer();
-    setTimeout(checkIfGameOver, 2000);
+    setTimeout(checkIfGameOver, 5000);
 
 });
 
@@ -95,13 +95,13 @@ function decrement() {
         revealAnswer("Not answered", randomQstn.ca);
         notAnswered++;
         resetTimer();
-        setTimeout(checkIfGameOver, 2000);
+        setTimeout(checkIfGameOver, 5000);
     }
 }
 
 // This function is used to reset the timer after each question
 function resetTimer() {
-    timer = 5;
+    timer = 30;
     clearInterval(intervalId);
 }
 
@@ -133,6 +133,7 @@ function reset() {
     notAnswered = 0;
 }
 
+// This function displays the image on answer reveal
 function addImage(){
     $("#imageDiv img:last-child").remove();
     var newimageDiv=$("<img>");
