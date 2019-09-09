@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/Musician.jpg" type="image/jpg">
+</head>
+
+<body>
+    <header>
+        <div id="mainHeader">
+            <h1 id="mainHeading">Trivia Quiz</h1>
+            <!-- <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5> -->
+        </div>
+    </header>
+
+    <div class="mainWrapper">
+        <div class="subQuestion">
+            <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5>
+            <div id="buttonDiv">
+                <button type="submit" id="start">Yes,let's Start</button>
+            </div>
+        </div>
+        <div class="questionWrapper">
+            <div id="timer">
+                Time Remaining : <span id="timeRemaining"></span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="question"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div id="answer1" class="ans"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer2" class="ans"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer3" class="ans"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer4" class="ans"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="answerWrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="status"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="answer"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="imageDiv">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scoreCard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h4>Here is your score :</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="wins"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="lost"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="notanswered"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="lostAudio">
+        <source src="assets/images/Lost.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wonAudio">
+        <source src="assets/images/Win.mp3" type="audio/mpeg">
+    </audio>
+    <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/questions.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
