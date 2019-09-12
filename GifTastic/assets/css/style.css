@@ -4,7 +4,9 @@ body{
     width: 100%;
     background-image: url('../images/Background.png');
 }
-
+h5{
+    color: rgb(97, 16, 151);;
+}
 #mainHeader{
     text-align: center;
     color: rgb(97, 16, 151);
@@ -45,9 +47,10 @@ button{
 button:hover{
     color:  rgb(185, 145, 230);
     background-color: rgb(97, 16, 151);
+    cursor: pointer;
 }
 
-#buttonsDiv{
+#buttonsDiv,#favButtons{
     color:rgb(97, 16, 151);
     /* margin: 0 auto; */
     /* text-align: center; */
@@ -55,7 +58,14 @@ button:hover{
     padding: 1%;
     border:2px dashed rgb(97, 16, 151);
 }
-#buttonsWrapper{
+#favButtons{
+    /* width: 200px;
+    height:100px; */
+    min-width:10vw;
+    min-height:10vh;
+}
+
+#buttonsWrapper,#favButtonsWrapper{
     text-align: center;
     margin: 0 auto;
     width: 50%;

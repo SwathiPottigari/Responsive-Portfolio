@@ -1,14 +1,29 @@
 var userFlower;
-var flowersArray =[];
+var flowersArray = [];
 var buttonsDiv = $("#buttonsDiv");
 var animalToSearch = '';
+var buttonId=0;
 
 
 // This function is called when a page is loaded
 // It creates the buttons for the alredy existing array items
 window.onload = function () {
-     initialDisplay();
+    initialDisplay();
 };
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
 
 // This function is called on click of the Add button
 // Functioanlity: To create buttons for the user entered values by calling addAnimalToList internally 
@@ -23,20 +38,24 @@ $("#submit").click(function () {
 
 // This function is used to add a button as user enters the value
 function addFlowersToList(flowername) {
+    buttonId++;
     var newButton = $("<button>");
-    newButton.text(flowername);    
+    newButton.text(flowername);
     newButton.addClass("newButtons");
+    newButton.attr("draggable", "true");
+    newButton.attr("ondragstart", "drag(event)");
+    newButton.attr("id",buttonId);
     buttonsDiv.append(newButton);
     flowersArray.push(flowername);
 };
 
 $(document.body).on("click", ".newButtons", function () {
-    
-        flowerToSearch = $(this).text();
-        var limit = 10;
-        makeAjaxCall(flowerToSearch, limit);
-        $("#limit").show();
-    
+
+    flowerToSearch = $(this).text();
+    var limit = 10;
+    makeAjaxCall(flowerToSearch, limit);
+    $("#limit").show();
+
 });
 
 function makeAjaxCall(flowerToSearch, limit) {
@@ -64,8 +83,8 @@ function createGrid(rownum, colnum, gifArray) {
                 var colDiv = $("<div>");
                 colDiv.addClass("col-md-4 col-sm-4");
                 colDiv.attr("id", colIndex);
-                colDiv.append("<h5>" + "Title : " +gifArray[imgCnt].title + "</h5>");
-                colDiv.append("<h5>" + "Rating : " +gifArray[imgCnt].rating + "</h5>");
+                colDiv.append("<h5>" + "Title : " + gifArray[imgCnt].title + "</h5>");
+                colDiv.append("<h5>" + "Rating : " + gifArray[imgCnt].rating + "</h5>");
                 colDiv.append('<img src="' + gifArray[imgCnt].images.original_still.url + '"class="img-thumbnail" id="' + imgCnt + '"data-still="' + gifArray[imgCnt].images.original_still.url + '"data-animate="' + gifArray[imgCnt].images.preview_gif.url + '" data-status="still"/>');
                 $('#row' + rowIndex).append(colDiv);
             }
@@ -96,20 +115,24 @@ $("#limit").click(function () {
     $("#limit").hide();
 });
 
-$("#clear").click(function () {   
+$("#clear").click(function () {
     initialDisplay();
 });
-function initialDisplay(){
-
+function initialDisplay() {
+    buttonId=0;
     $("#buttonsDiv .newButtons").remove();
-     flowersArray = ["Rose", "Lavender"];
+    flowersArray = ["Rose", "Lavender"];
     for (var i = 0; i < flowersArray.length; i++) {
+        buttonId++;
         var newButton = $("<button>");
         newButton.text(flowersArray[i]);
         newButton.addClass("newButtons");
-        buttonsDiv.append(newButton);
+        newButton.attr("id",buttonId);
+        newButton.attr("draggable", "true");
+        newButton.attr("ondragstart", "drag(event)");
+        buttonsDiv.append(newButton);        
     }
     $("#limit").hide();
-    $("#imageDiv .container").remove();    
+    $("#imageDiv .container").remove();
 };
 
