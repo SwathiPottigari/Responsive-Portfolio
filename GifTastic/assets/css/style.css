@@ -1,0 +1,92 @@
+body{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/Background.png');
+}
+
+#mainHeader{
+    text-align: center;
+    color: rgb(97, 16, 151);
+    font: bolder;
+}
+#mainHeading{
+    text-shadow: 3px 2px rgb(185, 145, 230);
+    font-size: 90px;
+    font-style: italic;
+}
+#mainWrapper{
+    min-height: calc(100vh - 70px);   
+}
+#animal{
+    background-color: rgb(235, 214, 248);
+}
+
+#mainButtonDiv{
+    margin-top: 3%;
+    text-align: center;
+    color: rgb(97, 16, 151);
+    font: bolder;
+}
+
+#mainButtonsContainer{
+    margin-top: 2%;
+    width: 30%;
+}
+
+button{
+    border-radius: 12px;
+    background-color:  rgb(185, 145, 230);
+    color: rgb(97, 16, 151);
+    /* margin-top: 1%; */
+    margin: 1%;
+}
+
+button:hover{
+    color:  rgb(185, 145, 230);
+    background-color: rgb(97, 16, 151);
+}
+
+#buttonsDiv{
+    color:rgb(97, 16, 151);
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    margin:5%;
+    padding: 1%;
+    border:2px dashed rgb(97, 16, 151);
+}
+#buttonsWrapper{
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#imageDiv{
+    text-align: center;
+    color: rgb(97, 16, 151);
+    font: bolder;    
+}
+img{
+    height: 50%;
+    width: 50%;
+}
+
+footer{
+    /* background-color: rgb(185, 145, 230); */
+    border-top: 4px solid rgb(97, 16, 151);    
+    text-align: center;
+    font-size: small;
+    height: 70px;
+    color:rgb(97, 16, 151);
+    /* padding-top: 20px; */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+}
+
+@media  screen and (max-width:780px) {
+    #mainHeading
+    {
+        font-size: 5vh;
+    }
+}
