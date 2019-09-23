@@ -11,7 +11,7 @@ html,body{
     height:auto;
     
 }
-h3{
+#name{
     /* background-color: #4aaaa5; */
     background-color: rgb(208, 193, 218);
     color: rgb(97, 16, 151);
@@ -107,7 +107,14 @@ p{
     color: rgb(97, 16, 151);
 }
 
-
+/* .projectHeadings{
+    color: rgb(97, 16, 151);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+ul{
+    color: rgb(97, 16, 151);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 /* Styles for Contact.html */
 form{
@@ -209,7 +216,7 @@ textarea{
         padding-left: 20px;
         padding-right: 20px;
     }
-    h3{
+    #name{
         width: 140px;
         /* padding-left: 20px; */
         margin-left: 20px;
@@ -241,7 +248,7 @@ textarea{
         #mainheading{
             width: 100%;
         }
-        h3{
+        #name{
             width: 100%;
             margin-left: 0;
             height: 50%;
