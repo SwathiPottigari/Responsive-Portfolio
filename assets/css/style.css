@@ -2,7 +2,7 @@
 html,body{
     display: block;
     margin: 0;
-    background-image: url(../images/white-waves.png);
+    background-image: url(../images/Background.png);
     /* height:100%; */
     padding: 0%;
     /* For resizing the web page according to the size of the window */
@@ -12,8 +12,9 @@ html,body{
     
 }
 h3{
-    background-color: #4aaaa5;
-    color: white;
+    /* background-color: #4aaaa5; */
+    background-color: rgb(208, 193, 218);
+    color: rgb(97, 16, 151);
     width: 140px;
     position: absolute;
     left: 0;
@@ -21,6 +22,8 @@ h3{
     margin: 0;
     display: inline-block;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 2px rgb(185, 145, 230);
+    font-style: italic;
 }
 nav{
     position: absolute;
@@ -29,44 +32,50 @@ nav{
     display: inline-block;
 }
 a{
-    color: #777777;
+    color: rgb(141, 87, 230);
     padding: 10px 10px;
+}
+nav{
+    color: rgb(141, 87, 230);
 }
 
 a:hover{
-    color:#4aaaa5;
+    color: rgb(97, 16, 151);
 }
 
 #mainheading{
     position:relative;
     text-align: center;
     height: 80px;
-    background-color:#ffffff;
+    /* background-color:#ffffff; */
+    background-color: rgb(208, 193, 218);
     /* width: 960px; */
     width: 75%;
     margin: 0 auto;
-
 }
 header{
-    background-color:#ffffff;
-border-bottom-color: #cccccc;
+    /* background-color:#ffffff; */
+    background-color: rgb(208, 193, 218);
+border-bottom-color:rgb(97, 16, 151);
 border-bottom-style: solid;
 border-bottom-width: 2px;
 width: 100%;
 }
 
 #header2{
-    color: #4aaaa5;
+    color: rgb(97, 16, 151);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom-color:#dddddd;
+    border-bottom-color:  rgb(97, 16, 151);
     border-bottom-style: solid;
     border-bottom-width: 2px;
     top: 0%;
+    /* text-shadow: 3px 1px rgb(185, 145, 230); */
+    font-style: italic;
 }
 .container,#wrapper{
     /* width: 920px; */
     width: 74%;
-    background-color:#ffffff;
+    background-color: rgb(230, 222, 236);
     margin: 0 auto;    
     padding: 20px;
     margin-top: 1%;
@@ -74,13 +83,13 @@ width: 100%;
 }
 
 footer{
-    background-color: #666666;
-    border-top: 8px solid #4aaaa5;
+    background-color: rgb(208, 193, 218);
+    border-top: 8px solid rgb(97, 16, 151);
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     text-align: center;
     font-size: x-small;
     height: 30px;
-    color: white;
+    color: rgb(141, 87, 230);
     padding-top: 20px;
     bottom: 0;
     width: 100%;
@@ -94,7 +103,7 @@ footer{
 }
 p{
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    color:#777777;
+    color: rgb(97, 16, 151);
 }
 
 

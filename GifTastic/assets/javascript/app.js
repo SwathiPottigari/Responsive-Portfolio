@@ -1,9 +1,13 @@
 var userFlower;
-var flowersArray = [];
+var flowersArray = ["Rose", "Lavender"];
 var buttonsDiv = $("#buttonsDiv");
 var animalToSearch = '';
-var buttonId=0;
+var buttonId = 0;
+var favoriteFlowersArray = localStorage.getItem("favFlowers")!==null?localStorage.getItem("favFlowers").split(","):[];
+var draggedFlower = 0;
+var localFlowerArray=localStorage.getItem("flowersArray")!==null?localStorage.getItem("flowersArray").split(","):[];
 
+// localStorage.setItem("flowersArray",flowersArray);
 
 // This function is called when a page is loaded
 // It creates the buttons for the alredy existing array items
@@ -13,17 +17,31 @@ window.onload = function () {
 
 function allowDrop(ev) {
     ev.preventDefault();
-  }
-  
-  function drag(ev) {
+}
+
+function drag(ev) {
+    console.log(ev.target.innerText);
     ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
+    draggedFlower = ev.target.innerText;
+}
+
+function drop(ev) {
     ev.preventDefault();
+    if (ev.target.id === "favButtons") {
+        favoriteFlowersArray.push(draggedFlower);
+        localFlowerArray.splice(localFlowerArray.indexOf(draggedFlower.toString()), 1);
+    }
+    else
+    {
+        localFlowerArray.push(draggedFlower);
+        console.log("first when dragged"+localFlowerArray);
+        favoriteFlowersArray.splice(favoriteFlowersArray.indexOf(draggedFlower.toString()), 1);
+    }
+    localStorage.setItem("favFlowers", favoriteFlowersArray);
+    localStorage.setItem("flowersArray", localFlowerArray);
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-  }
+}
 
 // This function is called on click of the Add button
 // Functioanlity: To create buttons for the user entered values by calling addAnimalToList internally 
@@ -44,9 +62,11 @@ function addFlowersToList(flowername) {
     newButton.addClass("newButtons");
     newButton.attr("draggable", "true");
     newButton.attr("ondragstart", "drag(event)");
-    newButton.attr("id",buttonId);
+    newButton.attr("id", buttonId);
     buttonsDiv.append(newButton);
     flowersArray.push(flowername);
+    localStorage.setItem("flowersArray", flowersArray);
+    console.log("this is the list after adding" + localStorage.getItem("flowersArray"));
 };
 
 $(document.body).on("click", ".newButtons", function () {
@@ -116,23 +136,41 @@ $("#limit").click(function () {
 });
 
 $("#clear").click(function () {
+    flowersArray = ["Rose", "Lavender"];
+    localStorage.clear();
     initialDisplay();
 });
 function initialDisplay() {
-    buttonId=0;
+    buttonId = 0;
     $("#buttonsDiv .newButtons").remove();
-    flowersArray = ["Rose", "Lavender"];
-    for (var i = 0; i < flowersArray.length; i++) {
+    $("#favButtons .newButtons").remove();
+    var arrays = !(localStorage.getItem("flowersArray") === null) ? localStorage.getItem("flowersArray").split(",") : flowersArray;
+    
+    for (var i = 0; i < arrays.length; i++) {
         buttonId++;
         var newButton = $("<button>");
-        newButton.text(flowersArray[i]);
+        newButton.text(arrays[i]);
         newButton.addClass("newButtons");
-        newButton.attr("id",buttonId);
+        newButton.attr("id", buttonId);
         newButton.attr("draggable", "true");
         newButton.attr("ondragstart", "drag(event)");
-        buttonsDiv.append(newButton);        
+        buttonsDiv.append(newButton);
+    }
+    if (localStorage.getItem("favFlowers") !== null) {
+        var arrays=localStorage.getItem("favFlowers").split(",");
+        for (var i = 0; i < arrays.length; i++) {
+            buttonId++;
+            var newButton = $("<button>");
+            newButton.text(arrays[i]);
+            newButton.addClass("newButtons");
+            newButton.attr("id", buttonId);
+            newButton.attr("draggable", "true");
+            newButton.attr("ondragstart", "drag(event)");
+            $("#favButtons").append(newButton);
+        }
     }
     $("#limit").hide();
     $("#imageDiv .container").remove();
 };
+
 
