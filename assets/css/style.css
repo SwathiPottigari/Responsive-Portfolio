@@ -89,7 +89,8 @@ footer{
     text-align: center;
     font-size: x-small;
     height: 30px;
-    color: rgb(141, 87, 230);
+    /* color: rgb(141, 87, 230); */
+    color: rgb(97, 16, 151);
     padding-top: 20px;
     bottom: 0;
     width: 100%;
@@ -165,9 +166,9 @@ textarea{
 }
 .portp{
     position:absolute;    
-    background-color:#4aaaa5;
+    background-color: rgb(208, 193, 218);
     text-align: center;
-    color:#ffffff;
+    color: rgb(97, 16, 151);
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 171px;
     bottom: 0%; 
@@ -175,6 +176,7 @@ textarea{
     font-size: small;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 
 /* For screen resolution 980px */
